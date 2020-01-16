@@ -25,8 +25,10 @@ public class SeedReverse {
 
         threads = new ArrayList<Thread>();
 
-        long segment = 1L << 48 / NUM_THREADS;
+        long segment = (1L << 48) / NUM_THREADS;
         long startSeed = 0;
+
+        System.out.println("Segment: " + segment);
 
         for (int x = 0; x < NUM_THREADS; x++){
             Thread thread = new Thread(

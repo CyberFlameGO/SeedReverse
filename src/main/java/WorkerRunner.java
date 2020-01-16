@@ -20,8 +20,6 @@ public class WorkerRunner implements Runnable{
         final Random rand = new Random();
 
         for (long randomSeed = startSeed; randomSeed < endSeed; randomSeed++) {
-            System.out.println("test");
-
             rand.setSeed(randomSeed);
             final long a = rand.nextLong() | 1L;
             for (int x = -checkXDist; x <= checkXDist; x++) {
